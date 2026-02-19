@@ -5,7 +5,7 @@ from glob import glob
 import os
 import unicodedata
 
-your_path = r"C:\Users\HUGO\Documents\GIS_Estudos\maps\new-ones\inundacao_colection_bh\isoietas\bh-jan-2025-2026\data-year\2026-cvs-files"
+your_path = r"THE PATH"
 # Folder with all CSV files
 files = glob(f"{your_path}\inmet_*.csv")
 print(f"Found {len(files)} files")
@@ -247,7 +247,7 @@ if len(data) > 0:
         print(f"    Max: {year_data['precip_january'].max():.1f} mm")
     
     # Save
-    save_path = r"C:\Users\HUGO\Desktop\isoeatas\generated"
+    save_path = r"THE PATH"
     output_shp = f"{save_path}\precipitacao_JANEIRO_FINAL_2026.geojson"
     gdf.to_file(output_shp)
     print(f"\n✓ Saved shapefile: {output_shp}")

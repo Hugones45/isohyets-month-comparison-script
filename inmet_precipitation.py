@@ -78,7 +78,7 @@ for f in files:
                 break
         
         if not date_col:
-            print(f"  ⚠️  No date column found, trying first column...")
+            print(f"  No date column found, trying first column...")
             date_col = df.columns[0]
         
         # Look for precipitation column
@@ -99,7 +99,7 @@ for f in files:
         for possible in possible_names:
             if possible in df.columns:
                 precip_col = possible
-                print(f"  ✓ Found precipitation column: '{precip_col}'")
+                print(f"  Found precipitation column: '{precip_col}'")
                 break
         
         # If not found, look for column containing the word
@@ -108,7 +108,7 @@ for f in files:
                 col_normalized = remove_accents(col.upper())
                 if 'PRECIP' in col_normalized:
                     precip_col = col
-                    print(f"  ✓ Found precipitation column (approximate): '{precip_col}'")
+                    print(f"  Found precipitation column (approximate): '{precip_col}'")
                     break
         
         if not precip_col:
